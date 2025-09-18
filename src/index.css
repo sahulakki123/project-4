@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    font-family: "Tektur", sans-serif;
+    font-weight: 400;
+}
+
+/*==========Main==========*/
+
+.nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: black;
+}
+.nav-part-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav img{
+    height: 60px;
+    width: auto;
+    margin-right: 100px;
+}
+.nav-part-1 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    color: white;
+}
+.nav-part-1 ul li{
+    margin-right: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/* 
+#ok{
+    color: red;
+} */
+
