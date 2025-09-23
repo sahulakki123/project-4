@@ -8,6 +8,7 @@ function Header(){
 
     return(
         <>
+        <header>
         <div className="nav">
             <div className="nav-part-1">
                 <img src={Logo} alt="logo"/>
@@ -24,6 +25,7 @@ function Header(){
                 </ul>
             </div>
         </div>
+        </header>
             <div className="img1">
             <img src={bmw} alt="" height="580px" width="100%"/>
         </div>

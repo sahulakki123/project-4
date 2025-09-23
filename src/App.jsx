@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
 import Footer from "./Footer";
+import Routing from "./Routing";
 
 
 function App(){
@@ -14,7 +14,7 @@ function App(){
 
         // React.Fragment
         <>
-        <Header/>
+        <Routing/>
         <Footer/>
         {/* <h1 id="ok">Hello world </h1>
         <p className="okkk">My Name is {myname}</p> */}
