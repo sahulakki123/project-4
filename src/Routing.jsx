@@ -18,8 +18,7 @@ const Routing=()=>{
             <Routes>
                 
                 <Route path="/" element={<Layout/>}>
-                <Route index element={<Home/>}/>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/home" element={<Home/>}/>
                 <Route path="/NewCars" element={<New_Cars/>}/>
                 <Route path="/Pre_Owned_Carserves" element={<Pre_Owned_Cars/>}/>
                 <Route path="/Services" element={<Services/>}/>
