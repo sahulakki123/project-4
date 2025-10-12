@@ -1,4 +1,6 @@
 import React from "react";
+import "./index.css"
+
 import Logo from './assets/BMW_Logo.svg'
 import bmw from './assets/bmw.jpg'
 import { CiUser } from "react-icons/ci";
@@ -43,14 +45,17 @@ const Layout=()=>{
             <div className="img1">
             <img src={bmw} alt="" height="580px" width="100%"/>
         </div>
-                            <img src={bmw1} alt=""  width="33.3%"/>
-                            <img src={bmw2} alt="" width="33.3%" />
-                            <img src={bmw3} alt="" width="33.3%" />
-                            <img src={bmw4} alt="" width="33.3%" />
-                            <img src={bmw5} alt="" width="33.3%" />
-                            <img src={bmw6} alt=""  width="33.3%"/>
 
-                            
+        <div>
+            <img src={bmw1} alt="" width="33.3%"/>
+            <img src={bmw2} alt="" width="33.3%" />
+            <img src={bmw3} alt="" width="33.3%" />
+            <img src={bmw4} alt="" width="33.3%" />
+            <img src={bmw5} alt="" width="33.3%" />
+            <img src={bmw6} alt=""  width="33.3%"/>
+
+        </div>
+
             <div class="container">
                 <h2>Shopping Tools</h2>
                 <div class="underline"></div>

@@ -1,1 +1,11 @@
-@import "tailwindcss";
+.con{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.bo{
+    border: 1cm;
+    height: 30%;
+    width: 30%;
+    }

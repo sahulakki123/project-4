@@ -1,11 +1,10 @@
 import React from "react";
-
+import './Card.css'
 
 const Card=({pimg,Carname, price,des,but})=>{
     return(
         <>
-            <div className="border w-70 h-65">
-                <h1>Card</h1>
+            <div className="bo">
                 <img src={pimg} alt="" />
                 <h2>{Carname}</h2>
                 <h2 className="justify-around items-center">{price}</h2>
