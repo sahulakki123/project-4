@@ -14,6 +14,7 @@ const Bookdetails=()=>{
             emailid:"",
             city:"",
             aadhaar:"",
+            carcount:"",
             carname:"",
             model:"",
             color:"",
@@ -61,6 +62,8 @@ const Bookdetails=()=>{
         </select> <br /> <br />
 
         enter Aadhaar number <input type="text" name='num' value={formData.aadhaar} onChange={changeinp} /><br /> <br />
+
+        enter car count <input type="text" name='num' value={formData.carcount} onChange={changeinp} /><br /> <br />
         enter car name <input type="text"  name='carname'value={formData.carmodel} onChange={changeinp} /><br /> <br />
 
 
@@ -92,11 +95,8 @@ const Bookdetails=()=>{
             <option value="Ev">Ev</option>
         </select><br /> <br />
 
-        enter Delivery-location <input type="location" value={formData.dlocation} onChange={changeinp} />
+        enter Delivery-location <input type="text" name='location' value={formData.dlocation} onChange={changeinp} />
         <br /> <br />
-        enter price <input type="text" name='price' value={formData.price} onChange={changeinp} /><br /> <br />
-
-
 
         <button type="submit">Book Now</button>
         </form>

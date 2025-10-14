@@ -7,9 +7,40 @@ const Crud=()=>{
 
 
  const [Data,setData]=useState([])
+ const [editid,seteditid]=useState(null)
+const [formData, setformData]=useState({
+     
+             name:"",
+             number:"",
+             emailid:"",
+             city:"",
+             aadhaar:"",
+             carcount:"",
+             carname:"",
+             model:"",
+             color:"",
+             fuel:"",
+             dlocation:"",
+             price:""
+ 
+         })
 
-    useEffect( ()=>{
-        axios.get("http://localhost:3000/Carbook").then( (res)=>{
+    
+    
+ const changeinp=(e)=>{
+            setformData({
+                ...formData,
+                [e.target.name]:e.target.value
+    
+            }
+        )
+        }
+    
+
+
+    const getData=()=>{
+
+     axios.get("http://localhost:3000/Carbook").then( (res)=>{
 
             setData(res.data);
             
@@ -18,6 +49,10 @@ const Crud=()=>{
             console.log(err);
             
         })
+   }
+
+    useEffect( ()=>{
+        getData()
 
     },[])
 
@@ -25,11 +60,42 @@ const Crud=()=>{
 
         axios.delete(`http://localhost:3000/Carbook/${id}`).then(()=>{
             alert("Data Daleted")
-            setData( Data.filter((e)=> e.id !== id))
+            getData()
+            // setData( Data.filter((e)=> e.id !== id))
         })
 
 
     }
+
+
+
+    const openform=(user)=>{
+
+      seteditid(user)
+      setformData({
+             name:user.name,
+             number:user.number,
+             emailid:user.emailid,
+             city:user.city,
+             aadhaar:user.aadhaar,
+             carcount:user.carcount,
+             carname:user.carname,
+             model:user.model,
+             color:user.color,
+             fuel:user.fuel,
+             dlocation:user.dlocation,
+             price:user.price
+      })
+
+    }
+
+    const handlupdata=(e)=>{
+      e.preventDefault()
+      axios.put(`http://localhost:3000/Carbook/${editid.id}`)
+
+    }
+
+
 
     return(
         <>
@@ -45,13 +111,16 @@ const Crud=()=>{
                     <th>Email id</th>
                     <th>City</th>
                     <th>Aadhaar id</th>
+                    <th>Car Count</th>
                     <th>Car name</th>
                     <th>Model</th>
                     <th>color</th>
                     <th>Fuel-type</th>
                     <th>Delivery-location</th>
                     <th>Payment</th>
+                    <th>Total</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,17 +131,88 @@ const Crud=()=>{
                     <td>{e.emailid}</td>
                     <td>{e.city}</td>
                     <td>{e.aadhaar}</td>
+                    <td>{e.carcount}</td>
                     <td>{e.carname}</td>
                     <td>{e.model}</td>
                     <td>{e.color}</td>
                     <td>{e.fuel}</td>
                     <td>{e.dlocation}</td>
                     <td>{e.price}</td>
+                    <td>{e.price * e.carcount}</td>
                     <td onClick={()=>{del(e.id)}}>Delete</td>
+                    <td onClick={()=>{openform(e)}}>Edit</td>
                 </tr>
                 ))}
             </tbody>
         </table>
+
+        
+
+
+
+
+        { editid && (
+
+
+            <form onSubmit={handlupdata}>
+        enter name <input type="text"  name='name' value={formData.name} onChange={changeinp} /><br /> <br />
+        enter number <input type="num" name='num' value={formData.number} onChange={changeinp} /><br /> <br />
+
+        enter email <input type="text"  name='email' value={formData.emailid} onChange={changeinp} /><br /> <br />
+
+
+        enter city name
+        <select name="city" id="" value={formData.city} onChange={changeinp}>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Indore">Indore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Betul">Betul</option>
+            <option value="Multai">Multai</option>
+            <option value="Nagpur">Nagpur</option>
+        </select> <br /> <br />
+
+        enter Aadhaar number <input type="text" name='num' value={formData.aadhaar} onChange={changeinp} /><br /> <br />
+
+        enter car count <input type="text" name='num' value={formData.carcount} onChange={changeinp} /><br /> <br />
+        enter car name <input type="text"  name='carname'value={formData.carmodel} onChange={changeinp} /><br /> <br />
+
+
+        enter Model name
+        <select name="model" id="" value={formData.model} onChange={changeinp}>
+            <option value="3 Series">3 Series</option>
+            <option value="5 Series">5 Series</option>
+            <option value="7 Series">7 Series</option>
+            <option value="9 Series iX">9 Series iX</option>
+            <option value="9 Series X3">9 Series X3</option>
+            <option value="9 Series X7">9 Series X7</option>
+        </select> <br /> <br />
+
+
+        enter color type
+        <select name="color" id="" value={formData.color} onChange={changeinp}>
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Gray">Gray</option>
+            <option value="Red">Red</option>
+            <option value="White">White</option>
+        </select><br /> <br />
+
+
+        enter fuel type
+        <select name="fuel" id="" value={formData.fuel} onChange={changeinp}>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Ev">Ev</option>
+        </select><br /> <br />
+
+        enter Delivery-location <input type="text" name='location' value={formData.dlocation} onChange={changeinp} />
+        <br /> <br />
+
+        <button type="submit">Updata</button>
+        </form>
+
+        )}
+
         </>
     )
 }
