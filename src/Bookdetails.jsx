@@ -46,9 +46,9 @@ const Bookdetails=()=>{
         <>
         <form onSubmit={handlesubmit}>
         enter name <input type="text"  name='name' value={formData.name} onChange={changeinp} /><br /> <br />
-        enter number <input type="num" name='num' value={formData.number} onChange={changeinp} /><br /> <br />
+        enter number <input type="num" name='number' value={formData.number} onChange={changeinp} /><br /> <br />
 
-        enter email <input type="text"  name='email' value={formData.emailid} onChange={changeinp} /><br /> <br />
+        enter email <input type="text"  name='emailid' value={formData.emailid} onChange={changeinp} /><br /> <br />
 
 
         enter city name
@@ -61,20 +61,20 @@ const Bookdetails=()=>{
             <option value="Nagpur">Nagpur</option>
         </select> <br /> <br />
 
-        enter Aadhaar number <input type="text" name='num' value={formData.aadhaar} onChange={changeinp} /><br /> <br />
+        enter Aadhaar number <input type="text" name='aadhaar' value={formData.aadhaar} onChange={changeinp} /><br /> <br />
 
-        enter car count <input type="text" name='num' value={formData.carcount} onChange={changeinp} /><br /> <br />
-        enter car name <input type="text"  name='carname'value={formData.carmodel} onChange={changeinp} /><br /> <br />
+        enter car count <input type="text" name='carcount' value={formData.carcount} onChange={changeinp} /><br /> <br />
+        enter car name <input type="text"  name='carname'value={formData.carname} onChange={changeinp} /><br /> <br />
 
 
         enter Model name
-        <select name="model" id="" value={formData.model} onChange={changeinp}>
-            <option value="3 Series">3 Series</option>
-            <option value="5 Series">5 Series</option>
-            <option value="7 Series">7 Series</option>
-            <option value="9 Series iX">9 Series iX</option>
-            <option value="9 Series X3">9 Series X3</option>
-            <option value="9 Series X7">9 Series X7</option>
+        <select name="model" id="" onChange={changeinp}>
+            <option value="5000000">3 Series</option>
+            <option value="7000000">5 Series</option>
+            <option value="8000000">7 Series</option>
+            <option value="9000000">9 Series iX</option>
+            <option value="10000000">9 Series X3</option>
+            <option value="12000000">9 Series X7</option>
         </select> <br /> <br />
 
 
@@ -95,8 +95,9 @@ const Bookdetails=()=>{
             <option value="Ev">Ev</option>
         </select><br /> <br />
 
-        enter Delivery-location <input type="text" name='location' value={formData.dlocation} onChange={changeinp} />
+        enter Delivery-location <input type="text" name='dlocation' value={formData.dlocation} onChange={changeinp} />
         <br /> <br />
+        
 
         <button type="submit">Book Now</button>
         </form>
