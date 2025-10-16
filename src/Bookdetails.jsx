@@ -29,6 +29,7 @@ const Bookdetails=()=>{
 
             axios.post("http://localhost:3000/Carbook",formData).then(()=>{
                 alert("car book")
+
                 navigate('/home')
             })
         }
@@ -52,7 +53,7 @@ const Bookdetails=()=>{
 
 
         enter city name
-        <select name="city" id="" value={formData.city} onChange={changeinp}>
+        <select name="city" id=""  onChange={changeinp}>
             <option value="Bhopal">Bhopal</option>
             <option value="Indore">Indore</option>
             <option value="Delhi">Delhi</option>
@@ -79,7 +80,8 @@ const Bookdetails=()=>{
 
 
         enter color type
-        <select name="color" id="" value={formData.color} onChange={changeinp}>
+        <select name="color" id="" onChange={changeinp}>
+            <option value=""></option>
             <option value="Black">Black</option>
             <option value="Blue">Blue</option>
             <option value="Gray">Gray</option>
@@ -89,7 +91,7 @@ const Bookdetails=()=>{
 
 
         enter fuel type
-        <select name="fuel" id="" value={formData.fuel} onChange={changeinp}>
+        <select name="fuel" id="" onChange={changeinp}>
             <option value="Petrol">Petrol</option>
             <option value="Diesel">Diesel</option>
             <option value="Ev">Ev</option>

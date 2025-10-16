@@ -116,7 +116,6 @@ const [formData, setformData]=useState({
                     <th>Aadhaar id</th>
                     <th>Car Count</th>
                     <th>Car name</th>
-                    <th>Model</th>
                     <th>color</th>
                     <th>Fuel-type</th>
                     <th>Delivery-location</th>
@@ -136,12 +135,11 @@ const [formData, setformData]=useState({
                     <td>{e.aadhaar}</td>
                     <td>{e.carcount}</td>
                     <td>{e.carname}</td>
-                    <td>{e.model*e.carcount}</td>
                     <td>{e.color}</td>
                     <td>{e.fuel}</td>
                     <td>{e.dlocation}</td>
-                    <td>{e.price}</td>
-                    <td>{e.price}</td>
+                    <td>{e.model}</td>
+                    <td>{e.model*e.carcount}</td>
                     <td onClick={()=>{del(e.id)}}>Delete</td>
                     <td onClick={()=>{openform(e)}}>Edit</td>
                 </tr>
@@ -163,7 +161,7 @@ const [formData, setformData]=useState({
 
 
         enter city name
-        <select name="city" id="" value={formData.city} onChange={changeinp}>
+        <select name="city" id=""  onChange={changeinp}>
             <option value="Bhopal">Bhopal</option>
             <option value="Indore">Indore</option>
             <option value="Delhi">Delhi</option>
@@ -190,7 +188,8 @@ const [formData, setformData]=useState({
 
 
         enter color type
-        <select name="color" id="" value={formData.color} onChange={changeinp}>
+        <select name="color" id="" onChange={changeinp}>
+            <option value=""></option>
             <option value="Black">Black</option>
             <option value="Blue">Blue</option>
             <option value="Gray">Gray</option>
@@ -200,7 +199,7 @@ const [formData, setformData]=useState({
 
 
         enter fuel type
-        <select name="fuel" id="" value={formData.fuel} onChange={changeinp}>
+        <select name="fuel" id=""  onChange={changeinp}>
             <option value="Petrol">Petrol</option>
             <option value="Diesel">Diesel</option>
             <option value="Ev">Ev</option>
