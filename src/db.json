@@ -53,42 +53,12 @@
       "aadhaar": "526341879456",
       "carcount": "2",
       "carname": "BMW s7",
-      "model": "8000000",
-      "color": "Black",
+      "model": "9000000",
+      "color": "Gray",
       "fuel": "Petrol",
       "dlocation": "sawari",
       "price": "",
       "id": "1ab9"
-    },
-    {
-      "name": "Rajesh",
-      "number": "7894561235",
-      "emailid": "rajesh@gmail.com",
-      "city": "Indore",
-      "aadhaar": "8794561234152",
-      "carcount": "2",
-      "carname": "bmw sw",
-      "model": "7000000",
-      "color": "Black",
-      "fuel": "Petrol",
-      "dlocation": "narshla",
-      "price": "",
-      "id": "24a1"
-    },
-    {
-      "name": "Rajesh",
-      "number": "7894561235",
-      "emailid": "rajesh@gmail.com",
-      "city": "Indore",
-      "aadhaar": "8794561234152",
-      "carcount": "2",
-      "carname": "bmw sw",
-      "model": "7000000",
-      "color": "Black",
-      "fuel": "Diesel",
-      "dlocation": "narshla",
-      "price": "",
-      "id": "3a28"
     }
   ]
 }

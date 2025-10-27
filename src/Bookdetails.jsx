@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./Crud.css"
 
 const Bookdetails=()=>{
 
@@ -45,64 +46,73 @@ const Bookdetails=()=>{
 
     return(
         <>
-        <form onSubmit={handlesubmit}>
-        enter name <input type="text"  name='name' value={formData.name} onChange={changeinp} /><br /> <br />
-        enter number <input type="num" name='number' value={formData.number} onChange={changeinp} /><br /> <br />
+         <div className="form-container">
+      <h2>🚗 Car Booking Form</h2>
+      <form onSubmit={handlesubmit} className="booking-form">
+        <label>Name</label>
+        <input type="text" name="name" value={formData.name} onChange={changeinp} required />
 
-        enter email <input type="text"  name='emailid' value={formData.emailid} onChange={changeinp} /><br /> <br />
+        <label>Phone Number</label>
+        <input type="number" name="number" value={formData.number} onChange={changeinp} required />
 
+        <label>Email</label>
+        <input type="email" name="emailid" value={formData.emailid} onChange={changeinp} required />
 
-        enter city name
-        <select name="city" id=""  onChange={changeinp}>
-            <option value="Bhopal">Bhopal</option>
-            <option value="Indore">Indore</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Betul">Betul</option>
-            <option value="Multai">Multai</option>
-            <option value="Nagpur">Nagpur</option>
-        </select> <br /> <br />
+        <label>City</label>
+        <select name="city" onChange={changeinp} required>
+          <option value="">-- Select City --</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Indore">Indore</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Betul">Betul</option>
+          <option value="Multai">Multai</option>
+          <option value="Nagpur">Nagpur</option>
+        </select>
 
-        enter Aadhaar number <input type="text" name='aadhaar' value={formData.aadhaar} onChange={changeinp} /><br /> <br />
+        <label>Aadhaar Number</label>
+        <input type="text" name="aadhaar" value={formData.aadhaar} onChange={changeinp} required />
 
-        enter car count <input type="text" name='carcount' value={formData.carcount} onChange={changeinp} /><br /> <br />
-        enter car name <input type="text"  name='carname'value={formData.carname} onChange={changeinp} /><br /> <br />
+        <label>Number of Cars</label>
+        <input type="number" name="carcount" value={formData.carcount} onChange={changeinp} required />
 
+        <label>Car Name</label>
+        <input type="text" name="carname" value={formData.carname} onChange={changeinp} required />
 
-        enter Model name
-        <select name="model" id="" onChange={changeinp}>
-            <option value="5000000">3 Series</option>
-            <option value="7000000">5 Series</option>
-            <option value="8000000">7 Series</option>
-            <option value="9000000">9 Series iX</option>
-            <option value="10000000">9 Series X3</option>
-            <option value="12000000">9 Series X7</option>
-        </select> <br /> <br />
+        <label>Model</label>
+        <select name="model" onChange={changeinp} required>
+          <option value="">-- Select Model --</option>
+          <option value="5000000">3 Series</option>
+          <option value="7000000">5 Series</option>
+          <option value="8000000">7 Series</option>
+          <option value="9000000">9 Series iX</option>
+          <option value="10000000">9 Series X3</option>
+          <option value="12000000">9 Series X7</option>
+        </select>
 
+        <label>Color</label>
+        <select name="color" onChange={changeinp} required>
+          <option value="">-- Select Color --</option>
+          <option value="Black">Black</option>
+          <option value="Blue">Blue</option>
+          <option value="Gray">Gray</option>
+          <option value="Red">Red</option>
+          <option value="White">White</option>
+        </select>
 
-        enter color type
-        <select name="color" id="" onChange={changeinp}>
-            <option value=""></option>
-            <option value="Black">Black</option>
-            <option value="Blue">Blue</option>
-            <option value="Gray">Gray</option>
-            <option value="Red">Red</option>
-            <option value="White">White</option>
-        </select><br /> <br />
+        <label>Fuel Type</label>
+        <select name="fuel" value={formData.fuel} onChange={changeinp} required>
+          <option value="">-- Select Fuel Type --</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Ev">Ev</option>
+        </select>
 
-
-        enter fuel type
-        <select name="fuel" id="" onChange={changeinp}>
-            <option value="Petrol">Petrol</option>
-            <option value="Diesel">Diesel</option>
-            <option value="Ev">Ev</option>
-        </select><br /> <br />
-
-        enter Delivery-location <input type="text" name='dlocation' value={formData.dlocation} onChange={changeinp} />
-        <br /> <br />
-        
+        <label>Delivery Location</label>
+        <input type="text" name="dlocation" value={formData.dlocation} onChange={changeinp} required />
 
         <button type="submit">Book Now</button>
-        </form>
+      </form>
+    </div>
         </>
     )
 }

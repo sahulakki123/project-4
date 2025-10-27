@@ -1,7 +1,7 @@
 import React from "react";
 import './Card.css'
 
-const Card=({pimg,Carname, price,des,but})=>{
+const Card=({pimg,Carname, price,des,Add,but})=>{
     return(
         <>
             <div className="bo">
@@ -9,6 +9,7 @@ const Card=({pimg,Carname, price,des,but})=>{
                 <h2>{Carname}</h2>
                 <h2 className="justify-around items-center">{price}</h2>
                 <p>{des}</p>
+                <button>{Add}</button>
                 <button>{but}</button>
             </div>
         </>

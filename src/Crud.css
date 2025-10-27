@@ -1,0 +1,285 @@
+/* Container styling */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Form layout */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.booking-form label {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs and selects */
+.booking-form input,
+.booking-form select {
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0px 0px 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Submit button */
+.booking-form button {
+  margin-top: 25px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4a90e2, #357ae8);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: linear-gradient(135deg, #357ae8, #2d5dc7);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .booking-form input,
+  .booking-form select {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======Crud css=========== */
+
+
+
+/* Background image and layout */
+.crud-page {
+  background-image: url("./assets/carbg.jpg"); /* Add your car image in src/assets */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 40px 10px;
+}
+
+/* Page title */
+.crud-page h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #e3f2fd;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Table styling */
+.crud-table {
+  width: 95%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.crud-table th, .crud-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.crud-table th {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #03a9f4;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.crud-table tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+/* Buttons inside table */
+.edit-btn, .delete-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+  color: white;
+}
+
+.edit-btn {
+  background: #2196f3;
+}
+
+.delete-btn {
+  background: #e53935;
+}
+
+.edit-btn:hover {
+  background: #0d8bf2;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+/* Modal overlay */
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+/* Edit form box */
+.edit-form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  color: white;
+  width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.edit-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #03a9f4;
+}
+
+/* Input fields */
+.edit-form input, .edit-form select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.edit-form input:focus, .edit-form select:focus {
+  box-shadow: 0 0 8px #2196f3;
+}
+
+/* Modal buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn, .cancel-btn {
+  flex: 1;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.save-btn {
+  background: #03a9f4;
+}
+
+.cancel-btn {
+  background: #f44336;
+}
+
+.save-btn:hover {
+  background: #0288d1;
+}
+
+.cancel-btn:hover {
+  background: #c62828;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .crud-table {
+    font-size: 13px;
+  }
+  .edit-form {
+    width: 90%;
+  }
+}

@@ -9,12 +9,12 @@ const Pre_Owned_Cars = () => {
       <div className="con">
 
 
-        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} but={"Buy Now"} />
-        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} but={"Buy Now"} />
-        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} but={"Buy Now"} />
-        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} but={"Buy Now"} />
-        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} but={"Buy Now"} />
-        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} but={"Buy Now"} />
+        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} Add={"add card"} but={"Buy Now"} />
+        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} Add={"add card"} but={"Buy Now"} />
+        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} Add={"add card"} but={"Buy Now"} />
+        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} Add={"add card"} but={"Buy Now"} />
+        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} Add={"add card"} but={"Buy Now"} />
+        <Card pimg={bmw1} Carname={"BMW 5 Series 520d"} price={999} des={"21,911 km Diesel 2016"} Add={"add card"} but={"Buy Now"} />
       
       </div>
     </>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
+import "./Crud.css"
 
 
 
@@ -103,10 +104,13 @@ const [formData, setformData]=useState({
     return(
         <>
         {/* npm i axios */}
-        <h1>show data</h1>
+
+        <div className="crud-page">
+
+        <h1>🚘 Car Booking Records</h1>
 
 
-        <table border={5}>
+        <table className="crud-table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -152,70 +156,159 @@ const [formData, setformData]=useState({
 
         { editid && (
 
-
+            <div >
+            <div className="edit-form">
+            <h2>Edit Car Booking</h2>
             <form onSubmit={handlupdata}>
-        enter name <input type="text"  name='name' value={formData.name} onChange={changeinp} /><br /> <br />
-        enter number <input type="num" name='number' value={formData.number} onChange={changeinp} /><br /> <br />
+              <label>Name</label>
+              <input type="text" name="name" value={formData.name} onChange={changeinp} />
 
-        enter email <input type="text"  name='emailid' value={formData.emailid} onChange={changeinp} /><br /> <br />
+              <label>Number</label>
+              <input type="number" name="number" value={formData.number} onChange={changeinp} />
 
+              <label>Email</label>
+              <input type="email" name="emailid" value={formData.emailid} onChange={changeinp} />
 
-        enter city name
-        <select name="city" id=""  onChange={changeinp}>
-            <option value="Bhopal">Bhopal</option>
-            <option value="Indore">Indore</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Betul">Betul</option>
-            <option value="Multai">Multai</option>
-            <option value="Nagpur">Nagpur</option>
-        </select> <br /> <br />
+              <label>City</label>
+              <select name="city" onChange={changeinp}>
+                <option value="">-- Select City --</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Indore">Indore</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Betul">Betul</option>
+                <option value="Multai">Multai</option>
+                <option value="Nagpur">Nagpur</option>
+              </select>
 
-        enter Aadhaar number <input type="text" name='aadhaar' value={formData.aadhaar} onChange={changeinp} /><br /> <br />
+              <label>Aadhaar</label>
+              <input type="text" name="aadhaar" value={formData.aadhaar} onChange={changeinp} />
 
-        enter car count <input type="text" name='carcount' value={formData.carcount} onChange={changeinp} /><br /> <br />
-        enter car name <input type="text"  name='carname'value={formData.carname} onChange={changeinp} /><br /> <br />
+              <label>Car Count</label>
+              <input type="number" name="carcount" value={formData.carcount} onChange={changeinp} />
 
+              <label>Car Name</label>
+              <input type="text" name="carname" value={formData.carname} onChange={changeinp} />
 
-        enter Model name
-        <select name="model" id="" onChange={changeinp}>
-            <option value="5000000">3 Series</option>
-            <option value="7000000">5 Series</option>
-            <option value="8000000">7 Series</option>
-            <option value="9000000">9 Series iX</option>
-            <option value="10000000">9 Series X3</option>
-            <option value="12000000">9 Series X7</option>
-        </select> <br /> <br />
+              <label>Model</label>
+              <select name="model" onChange={changeinp}>
+                <option value="">-- Select Model --</option>
+                <option value="5000000">3 Series</option>
+                <option value="7000000">5 Series</option>
+                <option value="8000000">7 Series</option>
+                <option value="9000000">9 Series iX</option>
+                <option value="10000000">9 Series X3</option>
+                <option value="12000000">9 Series X7</option>
+              </select>
 
+              <label>Color</label>
+              <select name="color" onChange={changeinp}>
+                <option value="">-- Select Color --</option>
+                <option value="Black">Black</option>
+                <option value="Blue">Blue</option>
+                <option value="Gray">Gray</option>
+                <option value="Red">Red</option>
+                <option value="White">White</option>
+              </select>
 
-        enter color type
-        <select name="color" id="" onChange={changeinp}>
-            <option value=""></option>
-            <option value="Black">Black</option>
-            <option value="Blue">Blue</option>
-            <option value="Gray">Gray</option>
-            <option value="Red">Red</option>
-            <option value="White">White</option>
-        </select><br /> <br />
+              <label>Fuel</label>
+              <select name="fuel" onChange={changeinp}>
+                <option value="">-- Select Fuel Type --</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Ev">Ev</option>
+              </select>
 
+              <label>Delivery Location</label>
+              <input type="text" name="dlocation" value={formData.dlocation} onChange={changeinp} />
 
-        enter fuel type
-        <select name="fuel" id=""  onChange={changeinp}>
-            <option value="Petrol">Petrol</option>
-            <option value="Diesel">Diesel</option>
-            <option value="Ev">Ev</option>
-        </select><br /> <br />
-
-        enter Delivery-location <input type="text" name='dlocation' value={formData.dlocation} onChange={changeinp} />
-        <br /> <br />
-
-
-
-        <button type="submit">Updata</button>
-        </form>
+              <div className="modal-buttons">
+                 <button type="submit">Updata</button>
+              </div>
+            </form>
+        </div>
+        </div>
 
         )}
+
+        </div>
 
         </>
     )
 }
 export default Crud
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //     <form onSubmit={handlupdata}>
+        // enter name <input type="text"  name='name' value={formData.name} onChange={changeinp} /><br /> <br />
+        // enter number <input type="num" name='number' value={formData.number} onChange={changeinp} /><br /> <br />
+
+        // enter email <input type="text"  name='emailid' value={formData.emailid} onChange={changeinp} /><br /> <br />
+
+
+        // enter city name
+        // <select name="city" id=""  onChange={changeinp}>
+        //     <option value="Bhopal">Bhopal</option>
+        //     <option value="Indore">Indore</option>
+        //     <option value="Delhi">Delhi</option>
+        //     <option value="Betul">Betul</option>
+        //     <option value="Multai">Multai</option>
+        //     <option value="Nagpur">Nagpur</option>
+        // </select> <br /> <br />
+
+        // enter Aadhaar number <input type="text" name='aadhaar' value={formData.aadhaar} onChange={changeinp} /><br /> <br />
+
+        // enter car count <input type="text" name='carcount' value={formData.carcount} onChange={changeinp} /><br /> <br />
+        // enter car name <input type="text"  name='carname'value={formData.carname} onChange={changeinp} /><br /> <br />
+
+
+        // enter Model name
+        // <select name="model" id="" onChange={changeinp}>
+        //     <option value="5000000">3 Series</option>
+        //     <option value="7000000">5 Series</option>
+        //     <option value="8000000">7 Series</option>
+        //     <option value="9000000">9 Series iX</option>
+        //     <option value="10000000">9 Series X3</option>
+        //     <option value="12000000">9 Series X7</option>
+        // </select> <br /> <br />
+
+
+        // enter color type
+        // <select name="color" id="" onChange={changeinp}>
+        //     <option value=""></option>
+        //     <option value="Black">Black</option>
+        //     <option value="Blue">Blue</option>
+        //     <option value="Gray">Gray</option>
+        //     <option value="Red">Red</option>
+        //     <option value="White">White</option>
+        // </select><br /> <br />
+
+
+        // enter fuel type
+        // <select name="fuel" id=""  onChange={changeinp}>
+        //     <option value="Petrol">Petrol</option>
+        //     <option value="Diesel">Diesel</option>
+        //     <option value="Ev">Ev</option>
+        // </select><br /> <br />
+
+        // enter Delivery-location <input type="text" name='dlocation' value={formData.dlocation} onChange={changeinp} />
+        // <br /> <br />
+
+
+
+        // <button type="submit">Updata</button>
+        // </form>
