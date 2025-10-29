@@ -3,7 +3,6 @@ import "./index.css"
 
 import Logo from './assets/BMW_Logo.svg'
 import bmw from './assets/bmw.jpg'
-import { CiUser } from "react-icons/ci";
 import { Link, Outlet } from "react-router-dom";
 
 import bmw1 from './assets/500_542.jpg'
@@ -36,7 +35,7 @@ const Layout=()=>{
                     <li> <Link to="/Explore">Explore</Link></li>
                     <li> <Link to="/Contact">Contact Us</Link></li>
                     <li> <Link to="/Buy_Nov">Buy Nov</Link></li>
-                    <CiUser />
+                    <li> <Link to="/Login">Log in</Link></li>        
                 </ul>
             </div>
         </div>
