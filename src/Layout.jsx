@@ -17,6 +17,7 @@ import { MdLocalOffer } from "react-icons/md";
 import { TbSteeringWheel } from "react-icons/tb";
 import { FaHandHoldingDollar } from "react-icons/fa6";
 import { IoCarSport } from "react-icons/io5";
+import Footer from "./Footer";
 
 const Layout=()=>{
 
@@ -82,7 +83,7 @@ const Layout=()=>{
                 </div>
                 </div>
             </div>
-
+        <Footer/>
         </>
     )
 

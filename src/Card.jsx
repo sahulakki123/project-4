@@ -1,7 +1,18 @@
 import React from "react";
 import './Card.css'
+import { useNavigate } from "react-router-dom";
+
 
 const Card=({pimg,Carname, price,des,Add,but})=>{
+
+        const navigate=useNavigate()
+
+          const NextPage = () => {
+        navigate("/Bookdetails");
+  };
+
+
+
     return(
         <>
             <div className="bo">
@@ -10,7 +21,7 @@ const Card=({pimg,Carname, price,des,Add,but})=>{
                 <h2 className="justify-around items-center">{price}</h2>
                 <p>{des}</p>
                 <button>{Add}</button>
-                <button>{but}</button>
+                <button onClick={NextPage}>{but}</button>
             </div>
         </>
     )

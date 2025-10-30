@@ -10,6 +10,7 @@ import Contact from "./Contact"
 import Buy_Nov from "./Buy_Nov"
 import Layout from "./Layout"
 import Login from "./Login"
+import Bookdetails from "./Bookdetails";
 
 
 const Routing=()=>{
@@ -30,6 +31,7 @@ const Routing=()=>{
                 <Route path="/Login" element={<Login/>}/>
                 <Route path="*" element={<h1>Error</h1>}/>
             </Route>
+                <Route path="/Bookdetails" element={<Bookdetails/>}/>
             </Routes>
         </>
     )
