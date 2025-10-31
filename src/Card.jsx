@@ -1,30 +1,31 @@
 import React from "react";
-import './Card.css'
+import "./Card.css";
 import { useNavigate } from "react-router-dom";
 
+const Card = ({ pimg, Carname, price, des, Add, but }) => {
+  const navigate = useNavigate();
 
-const Card=({pimg,Carname, price,des,Add,but})=>{
-
-        const navigate=useNavigate()
-
-          const NextPage = () => {
-        navigate("/Bookdetails");
+  const NextPage = () => {
+    navigate("/Bookdetails");
   };
 
+  return (
+    <>
+      <div className="card-box">
+        <img src={pimg} alt="car" className="car-img" />
 
+        <h2>{Carname}</h2>
+        <h3>{price}</h3>
 
-    return(
-        <>
-            <div className="bo">
-                <img src={pimg} alt="" />
-                <h2>{Carname}</h2>
-                <h2 className="justify-around items-center">{price}</h2>
-                <p>{des}</p>
-                <button>{Add}</button>
-                <button onClick={NextPage}>{but}</button>
-            </div>
-        </>
-    )
-}
+        <p>{des}</p>
 
-export default Card
+        <div className="btn-area">
+          <button className="btn1">{Add}</button>
+          <button className="btn2" onClick={NextPage}>{but}</button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Card;

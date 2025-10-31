@@ -59,6 +59,21 @@
       "dlocation": "sawari",
       "price": "",
       "id": "1ab9"
+    },
+    {
+      "name": "naveen",
+      "number": "7878545148",
+      "emailid": "naveen@gamil.com",
+      "city": "Indore",
+      "aadhaar": "78541236979",
+      "carcount": "1",
+      "carname": "BMW s9",
+      "model": "5000000",
+      "color": "Black",
+      "fuel": "Petrol",
+      "dlocation": "multai",
+      "price": "",
+      "id": "d296"
     }
   ]
 }

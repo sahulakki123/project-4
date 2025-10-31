@@ -1,43 +1,60 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Log.css"
+
+const Rform = () => {
+  let [formData, setformdata] = useState({
+    name: "",
+    num: "",
+    email: "",
+    pass: "",
+    cpass: "",
+  });
+
+  let handlchange = (e) => {
+    setformdata({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  let submitform = (e) => {
+    e.preventDefault();
+    alert(`name is ${formData.name} and number ${formData.num}, email ${formData.email}`);
+  };
+
+
+    const navigate=useNavigate()
+  
+            const NextPage = () => {
+          navigate("/Login");
+    };
 
 
 
-const Rform=()=>{
+  return (
+    <>
+      <div className="form-container">
+        <form className="modern-form" onSubmit={submitform}>
+          <h2>Signup & </h2><h2 onClick={NextPage}>Login</h2>
 
-    let [formData,setformdata]=useState({
-        name:"",
-        num:"",
-        email:"",
-        pass:"",
-        cpass:""
-    })
+          <label>Enter Name</label>
+          <input type="text" name="name" value={formData.name} onChange={handlchange} />
 
-    let handlchange=(e)=>{
-       setformdata ({...formData, [e.target.name]:e.target.value})
+          <label>Enter Number</label>
+          <input type="text" name="num" value={formData.num} onChange={handlchange} />
 
-    }
+          <label>Enter Email</label>
+          <input type="text" name="email" value={formData.email} onChange={handlchange} />
 
-    let submitform=(e)=>{
-        e.preventdefault(
-        alert(`name is ${formData.name} and number ${formData.num}, email ${formData.email}`)
-        )
-    }
+          <label>Enter Password</label>
+          <input type="password" name="pass" value={formData.pass} onChange={handlchange} />
 
+          <label>Enter Confirm Password</label>
+          <input type="password" name="cpass" value={formData.cpass} onChange={handlchange} />
 
-    return(
-        <>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </>
+  );
+};
 
-        <form onSubmit={submitform}>
-         enter name <input type="text"  name="name" value={formData.name} onChange={handlchange}/><br /> <br />
-         enter number <input type="text" name="num" value={formData.num} onChange={handlchange} /><br /> <br />
-         enter email <input type="text" name="email" value={formData.email} onChange={handlchange} /><br /> <br />
-         enter pass <input type="text" name="pass" value={formData.pass} onChange={handlchange} /><br /> <br />
-         enter confirm pass <input type="text" name="cpass" value={formData.cpass} onChange={handlchange} /><br /> <br />
-
-         <button type="submit">submit</button>
-         </form>
-        </>
-    )
-}
-
-export default Rform
+export default Rform;

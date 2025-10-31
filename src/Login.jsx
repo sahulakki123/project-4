@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Log.css";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Rform = () => {
   const [formData, setFormData] = useState({
@@ -16,10 +19,18 @@ const Rform = () => {
     alert(`Email is ${formData.email} and Password is ${formData.pass}`);
   };
 
+
+          const navigate=useNavigate()
+
+          const NextPage = () => {
+        navigate("/Signup");
+  };
+
+
   return (
     <div className="form-container">
       <form className="rform" onSubmit={submitform}>
-        <h2>Login & Signup</h2>
+        <h2>Login & </h2><h2 onClick={NextPage}>Signup</h2>
 
         <div className="form-group">
           <label>Email</label>
