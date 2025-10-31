@@ -17,14 +17,51 @@ const Rform = () => {
 
   let submitform = (e) => {
     e.preventDefault();
-    alert(`name is ${formData.name} and number ${formData.num}, email ${formData.email}`);
-  };
+
+     if(formData.name==""){
+      alert("name empty")
+    e.preventDefault();
+
+
+     }
+     else if(formData.num==""){
+            alert("number empty")
+    e.preventDefault();
+
+     }
+     else if(formData.email==""){
+            alert("email empty")
+    e.preventDefault();
+
+     }else if(formData.pass==""){
+            alert("pass empty")
+    e.preventDefault();
+
+     }else if(formData.cpass==""){
+            alert("cpass empty")
+    e.preventDefault();
+
+     }
+     
+
+     else{
+     localStorage.setItem("Name",formData.name)
+     localStorage.setItem("num",formData.num)
+     localStorage.setItem("email",formData.email)
+     localStorage.setItem("pass",formData.pass)
+     localStorage.setItem("cpass",formData.cpass)
+
+
+      navigate("/Login");
+
+  }}
 
 
     const navigate=useNavigate()
   
             const NextPage = () => {
-          navigate("/Login");
+      navigate("/Login");
+
     };
 
 

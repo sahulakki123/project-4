@@ -10,17 +10,35 @@ const Rform = () => {
     pass: "",
   });
 
+    const navigate=useNavigate()
+
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    
+           
+       
+  }
+
 
   const submitform = (e) => {
+
+  if(localStorage.getItem("email")==formData.email && localStorage.getItem("pass")==formData.pass){
+
     e.preventDefault();
-    alert(`Email is ${formData.email} and Password is ${formData.pass}`);
-  };
+        navigate("/home");
+  }
+  else{
+       alert("invalid")
+       e.preventDefault()
+  }
+    
+  }
 
 
-          const navigate=useNavigate()
+  
+
+
 
           const NextPage = () => {
         navigate("/Signup");
@@ -45,7 +63,7 @@ const Rform = () => {
         <button type="submit">Submit</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
 export default Rform;
