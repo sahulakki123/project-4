@@ -21,10 +21,10 @@ const Layout=()=>{
                     <li> <Link to="/Pre_Owned_Carserves">Pre-Owned Cars</Link></li>
                     <li> <Link to="/Services">Services</Link></li>
                     <li> <Link to="/Finance&Offers">Finance & Offers</Link></li>
-                    <li> <Link to="/Explore">Explore</Link></li>
                     <li> <Link to="/Contact">Contact Us</Link></li>
-                    <li> <Link to="/Buy_Nov">Buy Nov</Link></li>
-                    <li> <Link to="/Login">Log in</Link></li>        
+                    <li> <Link to="/Login">Log in</Link></li>
+                    <li> <Link to="/My_Orders">My-Order</Link></li>
+                            
                 </ul>
             </div>
         </div>

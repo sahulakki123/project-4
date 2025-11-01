@@ -46,34 +46,34 @@
       "price": ""
     },
     {
-      "name": "rohit",
-      "number": "7828915609",
-      "emailid": "rohit@gmail.com",
-      "city": "Indore",
-      "aadhaar": "526341879456",
+      "id": "5e6d",
+      "name": "sayali",
+      "number": "07000454322",
+      "emailid": "lakkisahus04@gmail.com",
+      "city": "Bhopal",
+      "aadhaar": "78541236979",
       "carcount": "2",
-      "carname": "BMW s7",
-      "model": "9000000",
+      "carname": "BMW s9",
+      "model": "7000000",
       "color": "Gray",
-      "fuel": "Petrol",
-      "dlocation": "sawari",
-      "price": "",
-      "id": "1ab9"
+      "fuel": "Diesel",
+      "dlocation": "multai",
+      "price": ""
     },
     {
-      "name": "naveen",
-      "number": "7878545148",
-      "emailid": "naveen@gamil.com",
-      "city": "Indore",
-      "aadhaar": "78541236979",
+      "id": "94ad",
+      "name": "amit",
+      "number": "07000454322",
+      "emailid": "amit@gmail.com",
+      "city": "Delhi",
+      "aadhaar": "7854216475",
       "carcount": "1",
-      "carname": "BMW s9",
-      "model": "5000000",
-      "color": "Black",
-      "fuel": "Petrol",
-      "dlocation": "multai",
-      "price": "",
-      "id": "d296"
+      "carname": "Bmw zy3",
+      "model": "8000000",
+      "color": "Blue",
+      "fuel": "Diesel",
+      "dlocation": "bhopal",
+      "price": ""
     }
   ]
 }

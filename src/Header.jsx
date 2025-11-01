@@ -18,9 +18,8 @@ function Header(){
                     <li>Pre-Owned Cars</li>
                     <li>Services</li>
                     <li>Finance & Offers</li>
-                    <li>Explore</li>
                     <li>Contact Us</li>
-                    <li>Buy Nov</li>
+                    <li>My-Order</li>
                     <CiUser />
                 </ul>
             </div>
