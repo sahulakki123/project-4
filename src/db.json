@@ -31,34 +31,19 @@
       "id": "4ac6"
     },
     {
-      "id": "6557",
-      "name": "prashant pawar",
-      "number": "841510211",
-      "emailid": "pawar@gamil.com",
-      "city": "Indore",
-      "aadhaar": "84156586",
-      "carcount": "2",
-      "carname": "BMW Y",
-      "model": "9000000",
-      "color": "Gray",
-      "fuel": "Diesel",
-      "dlocation": "chikhali",
-      "price": ""
-    },
-    {
-      "id": "ee9e",
-      "name": "amit",
-      "number": "8374194548512",
-      "emailid": "amit145@gmail.com",
+      "name": "Harish bhadeker",
+      "number": "07000161957",
+      "emailid": "harish@gmail.com",
       "city": "Nagpur",
-      "aadhaar": "7894561239",
-      "carcount": "21",
-      "carname": "BMW Y",
+      "aadhaar": "789456123659",
+      "carcount": "2",
+      "carname": "BMW M4",
       "model": "12000000",
-      "color": "Black",
+      "color": "Blue",
       "fuel": "Diesel",
-      "dlocation": "GRAM chindi ",
-      "price": ""
+      "dlocation": "bhopal",
+      "price": "",
+      "id": "2018"
     }
   ]
 }

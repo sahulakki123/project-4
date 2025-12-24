@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Log.css";
 import { useNavigate } from "react-router-dom";
+import ElectricBorder from './ElectricBorder'
 
 
 
@@ -46,7 +47,23 @@ const Rform = () => {
 
 
   return (
-    <div className="form-container">
+
+<>
+
+<div className="form-container">
+<ElectricBorder
+  color="#f80a0aff"
+  speed={1}
+  chaos={0.5}
+  thickness={2}
+  style={{ borderRadius: 16 }}
+>
+  <div>
+    <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
+ 
+
+
+
       <form className="rform" onSubmit={submitform}>
         <h2>Login & </h2><h2 onClick={NextPage}>Signup</h2>
 
@@ -62,7 +79,11 @@ const Rform = () => {
 
         <button type="submit">Submit</button>
       </form>
+          </p>
+  </div>
+</ElectricBorder>
     </div>
+    </>
   )
 }
 
