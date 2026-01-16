@@ -29,21 +29,6 @@
       "dlocation": "multai",
       "price": "",
       "id": "4ac6"
-    },
-    {
-      "name": "Harish bhadeker",
-      "number": "07000161957",
-      "emailid": "harish@gmail.com",
-      "city": "Nagpur",
-      "aadhaar": "789456123659",
-      "carcount": "2",
-      "carname": "BMW M4",
-      "model": "12000000",
-      "color": "Blue",
-      "fuel": "Diesel",
-      "dlocation": "bhopal",
-      "price": "",
-      "id": "2018"
     }
   ]
 }

@@ -26,15 +26,15 @@ const Home=()=>{
         <>
       
         
-        <img src={bmw1} alt=""  height="580%" width="100%"/>
+        <img src={bmw1} alt=""  height="50%" width="100%"/>
         
-        <img src={bmw2} alt=""  height="580%" width="100%"/>
+        <img src={bmw2} alt=""  height="50%" width="100%"/>
         
-        <img src={bmw3} alt=""  height="580%" width="100%"/>
+        <img src={bmw3} alt=""  height="50%" width="100%"/>
         
-        <img src={bmw4} alt=""  height="580%" width="100%"/>
+        <img src={bmw4} alt=""  height="50%" width="100%"/>
         
-        <img src={bmw5} alt=""  height="580%" width="100%"/>
+        <img src={bmw5} alt=""  height="50%" width="100%"/>
         
       
 
